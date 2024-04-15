@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h2>MY WEATHER</h2>
+      <div>
+        <input type="text" placeholder="Kyiv" id="searchInput" />
+        <button id="searchBtn" onclick="searchWeather()">Search</button>
+      </div>
+    </div>
+    <nav>
+      <div><span class="todaySpan" onclick="firstFunc()">Today</span></div>
+      <div>
+        <span class="fiveDaySpan" onclick="getFiveDayForecast()"
+          >5-day forecast</span
+        >
+      </div>
+    </nav>
+    <div class="today" id="today">
+      <div class="mainWindow">
+        <div class="currentWeather">
+          <span class="blueHeader">CURRENT WEATHER</span>
+          <span class="blueHeader" id="weatherDate"></span>
+        </div>
+        <div class="dailyWeatherInfo">
+          <figure>
+            <img src="" alt="" id="todayImg" />
+            <figcaption id="todayIcon"></figcaption>
+          </figure>
+          <div class="tempAndRealFeel" id="tempAndRealFeel">
+            <span class="todayTemperature" id="todayTemperature"></span>
+            <span class="realFeel" id="realFeel"></span>
+          </div>
+          <div class="sunriseInfo">
+            <div>
+              <span>Sunrise:</span>
+              <span class="sunrise" id="sunrise"></span>
+            </div>
+            <div>
+              <span>Sunset:</span>
+              <span class="sunset" id="sunset"></span>
+            </div>
+            <div>
+              <span>Duration:</span>
+              <span class="duration" id="duration"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="additionalWindow">
+        <span class="blueHeader">Hourly</span>
+        <table>
+          <tr id="weatherTime"></tr>
+          <tr class="weatherImg" id="weatherImg"></tr>
+          <tr class="forecast" id="forecast"></tr>
+          <tr class="temp" id="temp"></tr>
+          <tr class="realFeelHourly" id="realFeelHourly"></tr>
+          <tr class="wind" id="wind"></tr>
+        </table>
+      </div>
+      <div class="nearbyPlaces">
+        <span class="blueHeader">NEARBY PALCES</span>
+        <div class="fourPlaces">
+          <div class="firstPlace" id="firstPlace">
+            <span class="chernihiv" id="chernihiv">Chernihiv</span>
+            <div class="chernihivDiv">
+              <img src="" alt="" id="chernihivWeatherIcon" />
+              <span id="chernihivTemp"></span>
+            </div>
+          </div>
+          <div class="secondPlace" id="secondPlace">
+            <span class="cherkasy" id="cherkasy">Cherkasy</span>
+            <div class="cherkasyDiv">
+              <img src="" alt="" id="cherkasyWeatherIcon" />
+              <span id="cherkasyTemp"></span>
+            </div>
+          </div>
+          <div class="thirdPlace" id="thirdPlace">
+            <span class="zhytomyr" id="zhytomyr">Zhytomyr</span>
+            <div class="zhytomyrDiv">
+              <img src="" alt="" id="zhytomyrWeatherIcon" />
+              <span id="zhytomyrTemp"></span>
+            </div>
+          </div>
+          <div class="fourthPlace" id="fourthPlace">
+            <span class="poltava" id="poltava">Poltava</span>
+            <div class="poltavaDiv">
+              <img src="" alt="" id="poltavaWeatherIcon" />
+              <span id="poltavaTemp"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fiveDays" id="fiveDays">
+      <div class="days" id="days">
+        <div
+          id="tonight"
+          class="tonight"
+          onclick="getHourlySelectedDay(1)"
+        ></div>
+        <div id="day2" class="day2" onclick="getHourlySelectedDay(2)"></div>
+        <div id="day3" class="day3" onclick="getHourlySelectedDay(3)"></div>
+        <div id="day4" class="day4" onclick="getHourlySelectedDay(4)"></div>
+        <div id="day5" class="day5" onclick="getHourlySelectedDay(5)"></div>
+      </div>
+
+      <div class="additionalWindowFiveDays">
+        <span class="blueHeader">Hourly</span>
+        <table>
+          <tr id="weatherTimeFiveDays"></tr>
+          <tr class="weatherImgFiveDays" id="weatherImgFiveDays"></tr>
+          <tr class="forecastFiveDays" id="forecastFiveDays"></tr>
+          <tr class="tempFiveDays" id="tempFiveDays"></tr>
+          <tr class="realFeelHourlyFive" id="realFeelHourlyFive"></tr>
+          <tr class="windFiveDays" id="windFiveDays"></tr>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+body{
+    background-color: rgb(216, 216, 216);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+    color: deepskyblue;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+    align-items: center;
+    background-color: rgb(32, 32, 32);
+    color:white;
+    font-size: 25px;
+    height: 60px;
+}
+nav div{
+    height: 100%;
+    display: flex;
+}
+.sunriseInfo > div{
+    margin: 10px 0px;
+}
+.sunrise, .sunset, .duration{
+    margin: 0px 20px;
+}
+.todaySpan{
+    margin-left: 20px;
+    padding: 10px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    cursor: pointer;
+}
+.tempAndRealFeel{
+    display: flex;
+    flex-direction: column;
+}
+.todayTemperature{
+    font-size:50px;
+}
+.fiveDaySpan{
+    padding: 10px;
+    cursor: pointer;
+}
+.mainWindow, .additionalWindow, .additionalWindowFiveDays{
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.currentWeather, .dailyWeatherInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.dailyWeatherInfo{
+    align-items: center;
+    padding: 0px 30px;
+}
+.blueHeader{
+    color: deepskyblue;
+    font-weight: bold;
+}
+.nearbyPlaces{
+    background-color: white;
+    padding: 10px;
+}
+.fourPlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.fourPlaces > div{
+    width: 45%;
+    background-color: rgb(240, 240, 240);
+    margin: 5px;
+    padding: 0px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+table{
+    width:100%;
+    border-spacing: 20px;
+}
+th{
+    text-align: left;
+}
+
+.fourPlaces img{
+    width: 80px;
+    height: 80px;
+}
+.chernihivDiv, .cherkasyDiv, .zhytomyrDiv, .poltavaDiv{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.days{
+    display: flex;
+    margin-bottom: 10px;
+}
+.tonight, .day2, .day3, .day4, .day5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+    width: 20%;
+}
+.days > div > * {
+    margin-bottom: 10px;
+}
+.days > div:hover{
+    cursor: pointer;
+    background-color: rgb(226, 226, 226)
+}
